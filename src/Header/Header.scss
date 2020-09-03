@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid lightgray;
+    .header__logoImage{
+        width: 100px;
+        object-fit: contain;
+    }
+    .headerSearch{
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        .header__searchInputContainer {
+            display: flex;
+            align-items: center;
+            padding:  0.8rem 1rem 0.8rem 2rem !important;
+            border-radius: 50px;
+            text-transform: inherit;
+            background-color: white;
+
+            text-align: left;
+            .header__searchIconContainer{
+                margin-left: 0.5rem;
+                display: flex;
+                align-items: center;
+                padding: 0.2rem;
+                background-color: #FF385C;
+                border-radius: 100px;
+                .MuiSvgIcon-root{
+                    color: white;
+                }
+            }
+        }
+    }
+    .headerRight{
+        display: flex;
+        align-items: center;
+        .header__hostButton{
+            background-color: white;
+            text-transform: inherit;
+            border: none;
+            box-shadow: none;
+            border-radius: 30px;
+        }
+        .header__hostButton:hover{
+            background-color: #f3f3f3;
+        }
+    }
+}
