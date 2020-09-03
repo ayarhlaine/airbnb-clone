@@ -4,6 +4,9 @@
     justify-content: space-between;
     padding: 1rem 2.5rem;
     border-bottom: 1px solid lightgray;
+    position: sticky;
+    top: 0;
+    background-color: white;
     .header__logoImage{
         width: 100px;
         object-fit: contain;
@@ -20,13 +23,17 @@
             border-radius: 50px;
             text-transform: inherit;
             background-color: white;
-
             text-align: left;
+            animation-name: example;
+            animation-duration: 0.2s;
+            width: 300px;
+            .MuiButton-label{
+                display: flex;
+                justify-content: space-between;
+            }
             .header__searchIconContainer{
-                margin-left: 0.5rem;
                 display: flex;
                 align-items: center;
-                padding: 0.2rem;
                 background-color: #FF385C;
                 border-radius: 100px;
                 .MuiSvgIcon-root{
@@ -49,4 +56,9 @@
             background-color: #f3f3f3;
         }
     }
+}
+
+@keyframes example {
+    from { width: 500px;}
+    to { width: 300px;}
 }

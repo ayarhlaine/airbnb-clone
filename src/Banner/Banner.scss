@@ -1,0 +1,15 @@
+.banner{
+    height: 500px;
+    // width: 100%;
+    padding: 50px 100px;
+    background-position: center;
+    .bannerSearch{
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

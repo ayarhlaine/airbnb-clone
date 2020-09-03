@@ -8,12 +8,30 @@ import { IconButton } from '@material-ui/core';
 import './Header.scss';
 function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [showHeader, setShowHeader] = React.useState(false);
     const handleClose = () => {
         setAnchorEl(null);
       };
     const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
+    const changeHeader = (showHeaderValue) => {
+        setShowHeader(showHeaderValue)
+    };
+    React.useEffect(() => {
+        document.addEventListener('scroll', (event) => {
+            const height = window.scrollY;
+            if(height > 100) {
+                changeHeader(true);
+            } else {
+                changeHeader(false);
+            }
+        });
+        return () => {
+            document.removeEventListener('scroll');
+        }
+    },[]);
+    if(!showHeader) return null;
     return (
         <div className="header">
             <img className="header__logoImage" src={`${process.env.PUBLIC_URL}/images/logo.png`} alt=""/>
